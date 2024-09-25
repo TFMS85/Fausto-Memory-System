@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--
+    Author: Fausto Chavez
+    Date: 2024-09-15
+    File: About Me.html
+    Description: This is the About Me page that describes the website scope & goals. Users can now navigate to this link, using external styles.css file.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: rgb(48, 233, 97);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: darkblue;
+            color: rgb(49, 255, 176);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .site-title {
+            color: rgb(13, 240, 13);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .site-title img {
+            width: 40px; /* Adjust the size as needed */
+            height: auto;
+            margin-left: 10px;
+        }
+
+        .header-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-links a {
+            color: rgb(49, 255, 176);
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .header-links a:hover {
+            color: rgb(13, 240, 13);
+        }
+
+        /* Main Content Styles */
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-logo img {
+            width: 300px; /* Adjust the size as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgb(11, 26, 236);
+            color: rgb(25, 246, 157);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .footer-links {
+            margin-left: auto;
+        }
+
+        .footer-links a {
+            color: rgb(21, 247, 81);
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: rgb(13, 240, 13);
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center align the navigation links */
+            background-color: darkblue; /* Match header background */
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(20, 172, 242);
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(13, 240, 13);
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            color: white; /* Text color for table */
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #004080; /* Border color */
+            text-align: left;
+        }
+
+        th {
+            background-color: #0073e6; /* Header background color */
+        }
+
+        tr:nth-child(even) {
+            background-color: #3399ff; /* Even row background color */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #66b3ff; /* Odd row background color */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-links, .footer-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-links a, .footer-links a {
+                margin: 5px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .main-logo img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="site-title">
+            <span>The Fausto Memory System</span>
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="contact me.html">Contact Me</a>
+            <a href="services.html">Services</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- About Me Title -->
+        <h1>About Me</h1>
+
+        <!-- Logo Section -->
+        <div class="main-logo">
+            <img src="ContentImage.jpg" alt="Logo">
+        </div>
+
+        <!-- Welcome Section -->
+        <section>
+            <article>
+                <h2>Welcome</h2>
+                <p>It is an honor to be part of your memory journey.</p>
+                <p>My name is Fausto, and I have spent more than 10 years researching and testing various learning and memory systems.</p>
+                <p>Now I am overjoyed to share the most effective methods, realities, and great potential within you.</p>
+                <!-- Additional content can be added here -->
+            </article>
+        </section>
+
+        <!-- Table Section -->
+        <section>
+            <h2>Research Highlights</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Topic</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2014</td>
+                        <td>Memory Techniques</td>
+                        <td>Explored ancient and modern memory techniques for improving recall.</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>Cognitive Science</td>
+                        <td>Studied the impact of cognitive science on learning processes.</td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td>Neuroplasticity</td>
+                        <td>Researched how neuroplasticity can be leveraged to enhance memory.</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>Personalized Learning</td>
+                        <td>Developed methods for creating personalized learning experiences.</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Memory Systems</td>
+                        <td>Integrated various memory systems into a cohesive learning program.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Copyright Information -->
+        <p>&copy; 2024 Fausto Chavez. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="terms of service.html">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>
