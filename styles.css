@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: Sofadi One, Rubik;
+    background-color: black;
+    color: rgb(48, 233, 97);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: darkblue;
+    color: rgb(49, 255, 176);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.site-title {
+    color: rgb(13, 240, 13);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.site-title img {
+    width: 40px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 10px;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+}
+
+.header-links a {
+    color: rgb(49, 255, 176);
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header-links a:hover {
+    color: rgb(13, 240, 13);
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.main-logo img {
+    width: 300px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: rgb(11, 254, 177);
+    font-size: 50px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup {
+    position: relative; /* Ensure the popup is positioned relative to its container */
+}
+
+.popup p {
+    color: rgb(9, 197, 254); /* Change text color to light blue */
+    position: absolute; /* Position the caption absolutely */
+    bottom: 10px; /* Position it 10px from the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(11, 26, 236);
+    color: rgb(25, 246, 157);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.footer-links {
+    margin-left: auto;
+}
+
+.footer-links a {
+    color: rgb(21, 247, 81);
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: rgb(13, 240, 13);
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center align the navigation links */
+    background-color: darkblue; /* Match header background */
+    margin: 0;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(20, 172, 242);
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(13, 240, 13);
+}
+
+/* Center Text Utility */
+.center-text {
+    text-align: center;
+    margin-top: 20px;
+}
