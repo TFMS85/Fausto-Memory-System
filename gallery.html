@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--
+    Author: Fausto Chavez
+    Date: 2024-09-15
+    File: Gallery.html
+    Description: This is the Gallery page showcasing primary features. Users can now navigate to this link, using external styles.css file. At least two dynamic-width columns are now added. Now 4 images are included, viewable as thumbnails, that expand to display a description. When expanded there is an 'x' button to return to the gallery page.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: rgb(48, 233, 97);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: darkblue;
+            color: rgb(49, 255, 176);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .site-title {
+            color: rgb(13, 240, 13);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .site-title img {
+            width: 40px; /* Adjust the size as needed */
+            height: auto;
+            margin-left: 10px;
+        }
+
+        .header-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-links a {
+            color: rgb(49, 255, 176);
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .header-links a:hover {
+            color: rgb(13, 240, 13);
+        }
+
+        /* Main Content Styles */
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .main-logo img {
+            width: 300px; /* Adjust the size as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgb(11, 26, 236);
+            color: rgb(25, 246, 157);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .footer-links {
+            margin-left: auto;
+        }
+
+        .footer-links a {
+            color: rgb(21, 247, 81);
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: rgb(13, 240, 13);
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center align the navigation links */
+            background-color: darkblue; /* Match header background */
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(20, 172, 242);
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(13, 240, 13);
+        }
+
+        /* Center Text Utility */
+        .center-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            color: white; /* Text color for table */
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #004080; /* Border color */
+            text-align: left;
+        }
+
+        th {
+            background-color: #0073e6; /* Header background color */
+        }
+
+        tr:nth-child(even) {
+            background-color: #3399ff; /* Even row background color */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #66b3ff; /* Odd row background color */
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 150px; /* Thumbnail size */
+            height: 150px; /* Set height to keep aspect ratio */
+            object-fit: cover; /* Ensures the image covers the box while maintaining aspect ratio */
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Pop-up Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .popup:target {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="site-title">
+            <span>The Fausto Memory System</span>
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="contact me.html">Contact Me</a>
+            <a href="services.html">Services</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Gallery Title -->
+        <h1>Gallery</h1>
+
+        <!-- Logo Section -->
+        <div class="main-logo">
+            <img src="ContentImage.jpg" alt="Gallery Image">
+        </div>
+
+        <!-- Gallery Content Section -->
+        <section>
+            <article class="center-text">
+                <p>You have arrived at the gallery, where you may view some concepts of powerful memory enhancers.</p> 
+                <p>This includes Mind Maps, Association Methods, Inquiry, and Perception.</p>
+                <!-- Additional content can be added here -->
+            </article>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section class="gallery">
+            <a href="#img1"><img src="mindmap.jpg" alt="A colorful mind map illustrating key concepts."></a>
+            <a href="#img2"><img src="associations.jpg" alt="Visual representation of associations for memory retention."></a>
+            <a href="#img3"><img src="memoryinquiry.jpg" alt="A diagram showing techniques for memory inquiry."></a>
+            <a href="#img4"><img src="msensorym.jpg" alt="An illustration of sensory memory processes."></a>
+        </section>
+
+        <!-- Pop-up Images -->
+        <div id="img1" class="popup">
+            <a href="gallery.html" class="close">&times;</a>
+            <img src="mindmap.jpg" alt="A colorful mind map illustrating key concepts.">
+            <p>A colorful mind map illustrating key concepts.</p>
+        </div>
+        <div id="img2" class="popup">
+            <a href="gallery.html" class="close">&times;</a>
+            <img src="associations.jpg" alt="Visual representation of associations for memory retention.">
+            <p>Visual representation of associations for memory retention.</p>
+        </div>
+        <div id="img3" class="popup">
+            <a href="gallery.html" class="close">&times;</a>
+            <img src="memoryinquiry.jpg" alt="A diagram showing techniques for memory inquiry.">
+            <p>A diagram showing techniques for memory inquiry.</p>
+        </div>
+        <div id="img4" class="popup">
+            <a href="gallery.html" class="close">&times;</a>
+            <img src="msensorym.jpg" alt="An illustration of sensory memory processes.">
+            <p>An illustration of sensory memory processes.</p>
+        </div>
+
+        <!-- Table Section -->
+        <section>
+            <h2>Gallery Features</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mind Maps</td>
+                        <td>Visual tools that represent information in a hierarchical and relational manner, aiding memory and recall.</td>
+                    </tr>
+                    <tr>
+                        <td>Association Methods</td>
+                        <td>Techniques that link new information to existing knowledge, making it easier to remember.</td>
+                    </tr>
+                    <tr>
+                        <td>Inquiry</td>
+                        <td>The process of asking questions to enhance understanding and retention of new information.</td>
+                    </tr>
+                    <tr>
+                        <td>Perception</td>
+                        <td>Improving the ability to interpret and organize sensory information, which enhances memory.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Copyright Information -->
+        <p>&copy; 2024 Fausto Chavez. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy policy.html">Privacy Policy</a>
+            <a href="terms of service">Terms of Service</a>
